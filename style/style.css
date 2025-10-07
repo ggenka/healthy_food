@@ -1,9 +1,15 @@
+html{
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+box-sizing: inherit;
+}
 
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
 a {
@@ -16,21 +22,22 @@ ul, li {
 }
 
 .container {
-    width: 100%;
-    max-width: 1440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    max-width: 1300px;
+    padding: 0 20px;
+    margin: 0 auto;
 }
 
-.header {
-    width: 1300px;
+/* ---------- HEADER ---------- */
+.header__inner{
+    width: 100%;
+    max-width: 1300px;
     height: 54px;
-    margin-top: 59px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    text-align: center;
+    padding-top: 40px;
+    margin-bottom: 40px;
 }
 
 .header__nav-list {
@@ -39,15 +46,16 @@ ul, li {
     font-weight: 400;
     font-size: 20px;
     color: #2c3847;
-
-    .header__nav-link{
-       transition: color 600ms  ease ;
-    }
-
-    .header__nav-link:hover {
-        color: #5fb848;
-    }
 }
+
+.header__nav-link {
+    transition: color 400ms ease;
+}
+
+.header__nav-link:hover {
+    color: #5fb848;
+}
+
 .header__form {
     display: flex;
     align-items: center;
@@ -55,67 +63,96 @@ ul, li {
     margin-right: -200px;
 }
 
-.header__batton {
-    border-radius: 27px;
+.header__button {
+    border-radius: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 15px 30px;
+    padding: 22px 27px;
     background: #494949;
     font-weight: 400;
     font-size: 20px;
     text-align: center;
     color: #fff;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+    &.header__button:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 20px #5fb848;
+    }
 }
 
-.hero__content{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row-reverse;
-}
-
-.hero__text{
+/* ---------- HERO ---------- */
+.hero {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-left: 100px;
+    flex-wrap: wrap-reverse;
+    justify-content: space-between;
+    align-content: flex-end;
+}
 
+ .hero__img{
+     max-width: 1000px;
+     background-repeat: no-repeat;
+     background-size: cover;
+     position: absolute;
+     right: 12%;
+ }
 
-    .hero__text-title{
-        max-width: 600px;
-        font-weight: 700;
-        font-size: 70px;
-        color: #181d19;
-        margin-bottom: 30px;
+.hero__text {
+    width: 100%;
+    max-width: 600px;
+    height: 531px;
+    display: flex;
+    flex-direction: column;
+    padding-top:70px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    position: relative;
+}
 
-        span{
-            color: #5fb848;
-        }
+.hero__text-title {
+    font-weight: 700;
+    font-size: 4rem;
+    color: #181d19;
+    margin-bottom: 30px;
+}
+
+.hero__text-title span {
+    color: #5fb848;
+}
+
+.hero__text-description {
+    width: 100%;
+    max-width: 600px;
+    font-weight: 750;
+    font-size: 24px;
+    line-height: 142%;
+    color: #181d19;
+    margin-bottom: 50px;
+}
+
+.hero__text-button {
+    border-radius: 50px;
+    width: 200px;
+    padding: 25px 25px;
+    background: linear-gradient(180deg, #64bb47 0%, #2c9553 100%);
+    margin-right: 300px;
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+    color: #fff;
+    transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+
+    &.hero__text-button:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 20px 20px #5fb848;
     }
+}
+/* ---------- chooseus ---------- */
 
-    .hero__text-description{
-        max-width: 600px;
-        font-weight: 750;
-        font-size: 24px;
-        line-height: 142%;
-        color: #181d19;
-        margin-bottom: 50px;
-    }
-
-    .hero__text-button{
-        border-radius: 50px;
-        width: 200px;
-        padding: 30px  30px;
-        background: linear-gradient(180deg, #64bb47 0%, #2c9553 100%);
-        margin-right: 300px;
-        font-weight: 400;
-        font-size: 24px;
-        text-align: center;
-        color: #fff;
-    }
-
+.chooseus{
 
 }
+
 
