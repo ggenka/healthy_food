@@ -207,9 +207,9 @@ ul, li {
     }
 
     .hero__img{
-        max-width: 620px;
+        max-width: 60px;
         position: absolute;
-        top: 320px;
+        top: 340px;
     }
 
 }
