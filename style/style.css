@@ -22,6 +22,7 @@ ul, li {
 }
 
 .container {
+    width: 100%;
     max-width: 1300px;
     padding: 0 20px;
     margin: 0 auto;
@@ -85,18 +86,15 @@ ul, li {
 /* ---------- HERO ---------- */
 .hero {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap-reverse;
-    justify-content: space-between;
-    align-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    gap: 1px;
 }
 
  .hero__img{
-     max-width: 1000px;
      background-repeat: no-repeat;
      background-size: cover;
-     position: absolute;
-     right: 12%;
+     max-width: 800px;
  }
 
 .hero__text {
@@ -108,7 +106,6 @@ ul, li {
     padding-top:70px;
     padding-left: 20px;
     margin-bottom: 20px;
-    position: relative;
 }
 
 .hero__text-title {
@@ -156,3 +153,81 @@ ul, li {
 }
 
 
+@media only screen and (max-width: 1270px) {
+
+    .header__form {
+        margin-right: -100px;
+    }
+
+    .hero__img{
+        width: 700px;
+    }
+
+}
+
+@media only screen and (max-width: 1060px) {
+
+
+    .header__inner{
+
+    }
+
+    .header__form {
+       display: none;
+    }
+
+    .hero{
+       display: flex;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+
+    .hero__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .hero__text-title{
+        font-weight: 600;
+        font-size: 3.4rem;
+        margin-bottom: 20px;
+    }
+
+.hero__text-description {
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+
+    .hero__text-button{
+        padding: 28px 30px;
+        margin:  0 20px;
+    }
+
+    .hero__img{
+        max-width: 620px;
+        position: absolute;
+        top: 320px;
+    }
+
+}
+
+@media only screen and (max-width: 1200px) {
+
+    .hero__img{
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+@media (max-width: 768px) {
+    .hero__img {
+        width: 100%;
+    }
+}
