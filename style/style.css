@@ -203,6 +203,79 @@ ul, li {
 }
 
 
+.slider-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    overflow: hidden;
+    margin: auto;
+
+}
+
+.slider-track {
+    width: 600px;
+    gap: 100px;
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.card {
+    width: 160px;
+    display: flex;
+    flex: 0 0 50%; /* 2 карточки на екрані */
+    border-radius: 7px;
+    fill: #fff;
+    stroke-width: 2.00px;
+    stroke: #fff;
+    box-shadow: 3px 15px 35px 0 rgba(120, 125, 173, 0.06);
+}
+
+
+
+.slider-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    font-size: 18px;
+}
+
+.card__info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card__info-title{
+    font-weight: 770;
+    font-size: 19px;
+    color: #333;
+    margin-bottom: 70px;
+}
+
+.card__info-text {
+    font-weight: 750;
+    font-size: 18px;
+    /* line-height: 30px; */
+    line-height: 1.66667;
+    color: #181d19;
+}
+
+
+
+.card{
+    width: 100%;
+    max-width: 400px;
+    border-radius: 7px;
+    fill: #fff;
+    stroke-width: 2.00px;
+    stroke: #fff;
+    box-shadow: 3px 15px 35px 0 rgba(120, 125, 173, 0.06);
+}
+
+
 .contact__form{
     display: flex;
     align-items: center;
